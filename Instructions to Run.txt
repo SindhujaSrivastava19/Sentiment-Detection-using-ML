@@ -1,0 +1,10 @@
+1. Go to Anaconda Prompt
+
+2. Activate Environment:
+conda activate emotion-env
+
+3. Navigate to project folder:
+cd <copy and paste the path of the folder>
+
+4. Run Program:
+python test.py
