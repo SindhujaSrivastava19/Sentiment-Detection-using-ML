@@ -1,9 +1,4 @@
-'''
-PyPower Projects
-Emotion Detection Using AI
-'''
-
-#USAGE : python test.py
+#test.py
 
 from keras.models import load_model
 from time import sleep
@@ -22,7 +17,7 @@ cap = cv2.VideoCapture(0)
 
 
 while True:
-    # Grab a single frame of video
+    # Grabbing a single frame of video
     ret, frame = cap.read()
     labels = []
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -39,7 +34,7 @@ while True:
             roi = img_to_array(roi)
             roi = np.expand_dims(roi,axis=0)
 
-        # make a prediction on the ROI, then lookup the class
+        # making a prediction on the ROI, then lookup the class
 
             preds = classifier.predict(roi)[0]
             print("\nprediction = ",preds)
@@ -57,28 +52,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
