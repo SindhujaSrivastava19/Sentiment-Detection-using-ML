@@ -1,11 +1,10 @@
 #test.py
 
-from keras.models import load_model
-from time import sleep
-from keras.preprocessing.image import img_to_array
-from keras.preprocessing import image
 import cv2
 import numpy as np
+from time import sleep
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
 
 face_classifier = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
 classifier =load_model('./Emotion_Detection.h5')
